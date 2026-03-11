@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Feriados Nacionais</title>
+	<link rel="stylesheet" href="../../styles/global.css">
+	<link rel="stylesheet" href="./holidays.css">
+</head>
+<body>
+	<header>
+		<a
+			id="return-link"
+			href="../../../index.html">
+			Retornar para a página inicial
+		</a>
+		<h1>Feriados Nacionais</h1>
+		<section id="description">
+			<p>
+				Retorna a lista completa de feriados nacionais para o ano
+				especificado. Calcula automaticamente os feriados móveis baseados
+				na data da Páscoa e inclui todos os feriados fixos estabelecidos
+				pela legislação brasileira.
+			</p>
+			<p>O ano deve ser um número inteiro entre 1900 e 2199.</p>
+		</section>
+	</header>
+	<main>
+		<label for="year">Digite o ano que deseja consultar: </label>
+		<input id="year" type="number" min="1900" max="2199" required>
+		<button type="submit">Buscar</button>
+		<table>
+			<caption>
+				Feriados
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Data</th>
+					<th scope="col">Nome</th>
+					<th scope="col">Tipo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+	</main>
+	<footer>
+		<a
+			id="github-link"
+			href="https://github.com/miguelzackk/consume-brasil-api"
+			target="_blank">
+			Repositório no GitHub
+		</a>
+	</footer>
+	<script src="./holidays.js"></script>
+</body>
+</html>

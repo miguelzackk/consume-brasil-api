@@ -1,0 +1,120 @@
+body, header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    padding-top: 20px;
+    gap: 20px;
+    background-color: #EDEDED;
+}
+
+header {
+    gap: 20px;
+}
+
+#return-link {
+    padding: 10px 20px;
+    color: #1351B4;
+    border: 1px solid #1351B4;
+    border-radius: 20px;
+    transition:
+        color 0.25s,
+        border 0.25s;
+}
+
+#return-link:hover {
+    color: #5893ef;
+    border: 1px solid #5893ef;
+}
+
+h1 {
+    color: #0c326f;
+    font-weight: 500;
+    border-bottom: 1px dashed #0c326f;
+    padding-bottom: 10px;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    text-align: justify;
+    max-width: 650px;
+    color: #333333;
+}
+
+main {
+    gap: 14px;
+
+    label {
+        font-size: 16px;
+        color: #333333;
+    }
+
+    input {
+        width: 250px;
+        padding: 6px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    button {
+        cursor: pointer;
+        font-size: 14px;
+        padding: 8px 20px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #1351b4;
+        border-radius: 26px;
+        transition:
+            color 0.25s,
+            background-color 0.25s;
+    }
+}
+
+main > button:hover {
+    color: #1351b4;
+    background-color: #dbe8fb;
+}
+
+table {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    min-width: 450px;
+    box-shadow: 0 0 5px #CDCDCD;
+}
+
+caption {
+    padding: 10px;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #CDCDCD;
+}
+
+footer {
+    width: 100vw;
+    padding: 32px;
+    background-color: #0b295a;
+    margin-top: auto;
+}
+
+#github-link {
+    color: #cdcdcd;
+    text-decoration: underline;
+    transition: color 0.25s;
+}
+
+#github-link:hover {
+    color: #FFFFFF;
+}
