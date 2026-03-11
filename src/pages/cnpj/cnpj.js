@@ -6,9 +6,26 @@ const searchButton = document.getElementById("buttonSearch")
 const fetchCnpjpData = async (cnpj) => {
     try {
         const response = await fetch(`https://brasilapi.com.br/api/cnpj/v1/${cnpj}`)
+
         if (!response.ok) throw new Error("Cnpj não foi localizado! Tente novamente.")
-        return await response.json()
+
+        const data = await response.json()
+
+  
+        if (!data || !data.cnpj) {
+            throw new Error("Resposta inválida da API.")
+        }
+
+        return data
+
     } catch (error) {
+
+
+        if (error instanceof TypeError) {
+            console.error("Erro de conexão:", error)
+            throw new Error("Falha de conexão com a API.")
+        }
+
         console.error(error)
         return null
     }
@@ -18,39 +35,51 @@ const renderCnpj = async (cnpj) => {
     resultLog.innerText = "Buscando..."
 
     const cleanCnpj = cnpj.replace(/\D/g, "")
-    
-    const data = await fetchCnpjpData(cleanCnpj)
 
-    if (data) {
-        resultLog.innerText = "Resultado da busca"
+    try {
 
-        const row = cnpjTBody.insertRow()
+        const data = await fetchCnpjpData(cleanCnpj)
 
-        const cnpjCell = row.insertCell()
-        cnpjCell.textContent = data.cnpj
+        if (data) {
+            resultLog.innerText = "Resultado da busca"
 
-        const socialCell = row.insertCell()
-        socialCell.textContent = data.razao_social
+            const row = cnpjTBody.insertRow()
 
-        const fantasiaCell = row.insertCell()
-        fantasiaCell.textContent = data.nome_fantasia
+            const cnpjCell = row.insertCell()
+            cnpjCell.textContent = data.cnpj || "Não informado"
 
-        const cidadeCell = row.insertCell()
-        cidadeCell.textContent = data.municipio
+            const socialCell = row.insertCell()
+            socialCell.textContent = data.razao_social || "Não informado"
 
-        const situacaoCell = row.insertCell()
-        situacaoCell.textContent = data.descricao_situacao_cadastral
+            const fantasiaCell = row.insertCell()
+            fantasiaCell.textContent = data.nome_fantasia || "Não informado"
 
-    } else {
-        resultLog.innerText = "Cnpj não localizado. Tente novamente. Verifique se digitou da maneira correta."
+            const cidadeCell = row.insertCell()
+            cidadeCell.textContent = data.municipio || "Não informado"
+
+            const situacaoCell = row.insertCell()
+            situacaoCell.textContent = data.descricao_situacao_cadastral || "Não informado"
+
+        } else {
+            resultLog.innerText = "Cnpj não localizado. Tente novamente. Verifique se digitou da maneira correta."
+        }
+
+    } catch (error) {
+
+        resultLog.innerText = error.message
+
     }
 
-    cnpjInput.value = "";
-
+    cnpjInput.value = ""
 }
 
 searchButton.addEventListener("click", (event) => {
     event.preventDefault()
-    const query = cnpjInput.value.trim();
-    if (query) renderCnpj(query)
+    const query = cnpjInput.value.trim()
+
+    if (query) {
+        renderCnpj(query)
+    } else {
+        resultLog.innerText = "Digite um CNPJ."
+    }
 })
