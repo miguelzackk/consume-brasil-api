@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CNPJ</title>
+
+    <link rel="stylesheet" href="./cnpj.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+
+<body>
+
+<header>
+
+    <a
+            id="return-link"
+            href="../../../index.html">
+        Retornar para a página inicial
+    </a>
+
+    <h1>CNPJ</h1>
+
+    <section id="description">
+
+        <p>
+            Retorna os dados do CNPJ digitado, trazendo algumas informações
+            importantes da empresa cadastrada na Receita Federal.
+        </p>
+
+        <p>
+            O Cadastro Nacional da Pessoa Jurídica é um número único que identifica
+            uma empresa no Brasil. Ele possui 14 dígitos e pode ser digitado
+            com ou sem formatação.
+        </p>
+
+    </section>
+
+</header>
+
+
+<main>
+
+    <label for="cnpj">Digite o CNPJ que deseja consultar:</label>
+
+    <input
+            id="cnpj"
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]{14}"
+            placeholder="00000000000000"
+            required
+    >
+
+    <button id="buttonSearch" type="submit">
+        Buscar
+    </button>
+
+    <div class="table-container">
+
+        <table>
+
+            <caption id="result-log">
+                Resultado da busca
+            </caption>
+
+            <thead>
+            <tr>
+                <th scope="col">CNPJ</th>
+                <th scope="col">Razão Social</th>
+                <th scope="col">Nome Fantasia</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Situação</th>
+            </tr>
+            </thead>
+
+            <tbody id="cnpj-table-body">
+            <!-- Dados da API aparecerão aqui -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <a
+            id="github-link"
+            href="https://github.com/miguelzackk/consume-brasil-api"
+            target="_blank">
+        Repositório no GitHub
+    </a>
+
+</footer>
+
+<script src="./cnpj.js"></script>
+
+</body>
+</html>
