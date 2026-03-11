@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taxas</title>
+    <link rel="stylesheet" href="./taxas.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header>
+    <a
+            id="return-link"
+            href="../../../index.html">
+        Retornar para a página inicial
+    </a>
+    <h1>Taxas</h1>
+    <section id="description">
+        <p>
+            Retorna as taxas de juros e alguns índices oficiais do Brasil
+        </p>
+        <p>Busque as informações de uma taxa a partir do seu nome/sigla. As taxas disponíveis são Selic, CDI e IPCA.</p>
+    </section>
+</header>
+<main>
+    <label for="taxas">Digite a taxa que deseja consultar: </label>
+    <input
+            id="taxas"
+            type="text"
+            inputmode="text"
+            placeholder="CDI"
+            maxlength="5"
+            required
+    >
+    <button id="buttonSearch" type="submit">Buscar</button>
+    <div class="table-container">
+        <table>
+            <caption id="result-log">Resultado da busca</caption>
+
+            <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Valor</th>
+            </tr>
+            </thead>
+
+            <tbody id="taxas-table-body">
+            <!-- Dados da API aparecerão aqui -->
+            </tbody>
+        </table>
+    </div>
+</main>
+<footer>
+    <a
+            id="github-link"
+            href="https://github.com/miguelzackk/consume-brasil-api"
+            target="_blank">
+        Repositório no GitHub
+    </a>
+</footer>
+<script src="./taxas.js"></script>
+</body>
+</html>
