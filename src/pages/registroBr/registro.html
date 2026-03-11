@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro BR</title>
+
+    <link rel="stylesheet" href="./registro.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+
+<body>
+
+<header>
+
+    <a
+            id="return-link"
+            href="../../../index.html">
+        Retornar para a página inicial
+    </a>
+
+    <h1>Registro BR</h1>
+
+    <section id="description">
+
+        <p>
+            Retorna o status de um domínio.br
+        </p>
+
+        <p>
+            Pode ser inserido o domínio ou nome a ser avaliado.
+        </p>
+
+    </section>
+
+</header>
+
+
+<main>
+
+    <label for="registro">Digite o domínio que deseja consultar:</label>
+
+    <input
+            id="registro"
+            type="text"
+            inputmode="text"
+            placeholder="registro.br"
+            required
+    >
+
+    <button id="buttonSearch" type="submit">
+        Buscar
+    </button>
+
+    <div class="table-container">
+
+        <table>
+
+            <caption id="result-log">
+                Resultado da busca
+            </caption>
+
+            <thead>
+            <tr>
+                <th scope="col">Domínio</th>
+                <th scope="col">Status de registro</th>
+                <th scope="col">Status de publicação</th>
+                <th scope="col">Data de expiração</th>
+            </tr>
+            </thead>
+
+            <tbody id="registro-table-body">
+            <!-- Dados da API aparecerão aqui -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <a
+            id="github-link"
+            href="https://github.com/miguelzackk/consume-brasil-api"
+            target="_blank">
+        Repositório no GitHub
+    </a>
+
+</footer>
+
+<script src="./registro.js"></script>
+
+</body>
+</html>
