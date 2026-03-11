@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CEP</title>
+    <link rel="stylesheet" href="./cep.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header>
+    <a
+            id="return-link"
+            href="../../../index.html">
+        Retornar para a página inicial
+    </a>
+    <h1>CEP</h1>
+    <section id="description">
+        <p>
+            Retorna os dados do CEP digitado. Inclui informações de geolocalização (latitude e longitude) além dos dados
+            básicos de endereço.
+        </p>
+        <p>O CEP deve conter exatamente 8 dígitos, com ou sem formatação (hífen). Exemplo: 01310-930 ou 01310930.</p>
+    </section>
+</header>
+<main>
+    <label for="cep">Digite o cep que deseja consultar: </label>
+    <input
+            id="cep"
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]{5}-?[0-9]{3}"
+            placeholder="00000-000"
+            maxlength="9"
+            required
+    >
+    <button id="buttonSearch" type="submit">Buscar</button>
+    <div class="table-container">
+        <table>
+            <caption id="result-log">Resultado da busca</caption>
+
+            <thead>
+            <tr>
+                <th scope="col">CEP</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">Rua</th>
+            </tr>
+            </thead>
+
+            <tbody id="cep-table-body">
+            <!-- Dados da API aparecerão aqui -->
+            </tbody>
+        </table>
+    </div>
+</main>
+<footer>
+    <a
+            id="github-link"
+            href="https://github.com/miguelzackk/consume-brasil-api"
+            target="_blank">
+        Repositório no GitHub
+    </a>
+</footer>
+<script src="./cep.js"></script>
+</body>
+</html>
