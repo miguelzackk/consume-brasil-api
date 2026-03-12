@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Bancos</title>
+	<link rel="stylesheet" href="../../styles/global.css">
+	<link rel="stylesheet" href="./banks.css">
+</head>
+<body>
+	<header>
+		<a
+			id="return-link"
+			href="../../../index.html">
+			Retornar para a página inicial
+		</a>
+		<h1>Bancos</h1>
+		<section id="description">
+			<p>
+				Retorna informações de todos os bancos do Brasil ou busca as
+				informações de um banco a partir de um código.
+			</p>
+		</section>
+	</header>
+	<main>
+		<label for="bankCode">
+			Digite o código do banco que deseja consultar:
+		</label>
+		<input
+			id="bankCode"
+			name="bankCode"
+			type="text"
+			inputmode="numeric"
+			maxlength="3"
+			placeholder="000"
+			required>
+		<button id="search-button">Buscar</button>
+		<button id="list-button">Exibir / Ocultar todos os bancos</button>
+		<table id="bank-table">
+			<caption>
+				Banco por código
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Código</th>
+					<th scope="col">Nome</th>
+					<th scope="col">ISPB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+
+		<table id="banks-list-table" class="hidden">
+			<caption>
+				Lista de bancos
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Código</th>
+					<th scope="col">Nome</th>
+					<th scope="col">ISPB</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+	</main>
+	<footer>
+		<a
+			id="github-link"
+			href="https://github.com/miguelzackk/consume-brasil-api"
+			target="_blank">
+			Repositório no GitHub
+		</a>
+	</footer>
+
+	<script src="./banks.js"></script>
+</body>
+</html>
