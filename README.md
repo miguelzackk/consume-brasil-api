@@ -15,9 +15,38 @@ https://brasilapi.com.br/docs
 
 O sistema permite consultar diferentes tipos de informações utilizando endpoints da Brasil API.
 
+###  Consulta de Bancos
+
+Busca informações de **bancos brasileiros** a partir do código informado.
+
+Dados exibidos:
+
+* Código
+* Nome
+* ISPB
+
+---
+
+###  Consulta de Câmbio
+
+Busca informações de **moedas e cotações** a partir da moeda e data informadas.
+
+Dados exibidos:
+
+* Moeda
+* Data
+* Paridade de Compra
+* Paridade de Venda
+* Cotação de Compra
+* Cotação de Venda
+* Data e Hora da Cotação
+* Tipo de Boletim
+
+---
+
 ###  Consulta de CEP
 
-Busca informações de endereço a partir de um CEP informado.
+Busca informações de **endereço** a partir de um CEP informado.
 
 Dados exibidos:
 
@@ -31,7 +60,7 @@ Dados exibidos:
 
 ###  Consulta de CNPJ
 
-Consulta dados cadastrais de empresas registradas no Brasil.
+Consulta **dados cadastrais de empresas** registradas no Brasil.
 
 Dados exibidos:
 
@@ -41,6 +70,17 @@ Dados exibidos:
 * Município
 * UF
 * Data de abertura
+
+---
+
+###  Consulta de DDD
+
+Busca informações de **estados e cidades** com base no DDD.
+
+Dados exibidos:
+
+* Estado
+* Cidades
 
 ---
 
@@ -58,7 +98,7 @@ Dados exibidos:
 
 ###  Consulta de Taxas
 
-Consulta taxas financeiras disponíveis na API.
+Consulta **taxas financeiras** disponíveis na API.
 
 Dados exibidos:
 
@@ -94,10 +134,7 @@ consume-brasil-api
 ├── index.html
 │
 ├── src
-│   ├── assets
-│   │   └── images
-│   │
-│   ├── scripts
+│   ├
 │   │
 │   ├── styles
 │   │   ├── reset.css
@@ -163,27 +200,35 @@ Adicione aqui capturas de tela do funcionamento da aplicação.
 
 ![img.png](images/img.png)
 
-
-### Consulta de CEP
+### Consulta de Bancos
 
 ![img_1.png](images/img_1.png)
 
-### Consulta de CNPJ
+### Consulta de Câmbio
 
 ![img_2.png](images/img_2.png)
 
-### Consulta de Feriados
+### Consulta de CEP
 
-
-### Consulta de Domínio
 ![img_3.png](images/img_3.png)
 
-### Consulta de Taxas
+### Consulta de CNPJ
+
 ![img_4.png](images/img_4.png)
 
+### Consulta de DDD
 
+![img_5.png](images/img_5.png)
 
+### Consulta de Feriados Nacionais
 
+![img_6.png](images/img_6.png)
+
+### Consulta de Domínio
+![img_7.png](images/img_7.png)
+
+### Consulta de Taxas
+![img_8.png](images/img_8.png)
 
 ---
 
