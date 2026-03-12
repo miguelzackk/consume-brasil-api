@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>DDD</title>
+	<link rel="stylesheet" href="../../styles/global.css">
+	<link rel="stylesheet" href="./ddd.css">
+</head>
+<body>
+	<header>
+		<a
+			id="return-link"
+			href="../../../index.html">
+			Retornar para a página inicial
+		</a>
+		<h1>DDD</h1>
+		<section id="description">
+			<p>
+				Consulta de códigos DDD (Discagem Direta à Distância)
+				brasileiros. Permite buscar informações sobre estados e cidades
+				associadas a cada código de área telefônica.
+			</p>
+			<p>
+				DDD significa Discagem Direta à Distância. É um código
+				constituído por 2 dígitos que identificam as principais cidades
+				do país. Deve ser informado apenas os 2 dígitos do código de
+				área.
+			</p>
+		</section>
+	</header>
+	<main>
+		<label for="ddd">Digite o DDD que deseja consultar: </label>
+		<input
+			id="ddd"
+			name="ddd"
+			type="text"
+			inputmode="numeric"
+			maxlength="2"
+			placeholder="00"
+			required>
+		<button id="search-button">Buscar</button>
+		<table id="ddd-state-table">
+			<caption>
+				Estado do DDD
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Estado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+
+		<table id="ddd-city-table">
+			<caption>
+				Cidades do DDD
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Cidades</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+	</main>
+	<footer>
+		<a
+			id="github-link"
+			href="https://github.com/miguelzackk/consume-brasil-api"
+			target="_blank">
+			Repositório no GitHub
+		</a>
+	</footer>
+
+	<script src="./ddd.js"></script>
+</body>
+</html>
