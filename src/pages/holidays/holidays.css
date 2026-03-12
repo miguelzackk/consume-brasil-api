@@ -49,6 +49,7 @@ h1 {
 
 main {
     gap: 14px;
+    width: 50%;
 
     label {
         font-size: 16px;
@@ -84,7 +85,7 @@ main > button:hover {
 table {
     background-color: #FFFFFF;
     border-radius: 8px;
-    min-width: 450px;
+    width: 100%;
     box-shadow: 0 0 5px #CDCDCD;
 }
 
