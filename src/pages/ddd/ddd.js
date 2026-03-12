@@ -21,8 +21,12 @@ async function getDddData() {
 			console.clear();
 			console.table(data);
 
-			while (tableState.rows.length > 1 && tableCity.rows.length > 1) {
+			while (tableState.rows.length > 1) {
 				tableState.deleteRow(1);
+
+			}
+
+			while (tableCity.rows.length > 1) {
 				tableCity.deleteRow(1);
 			}
 
