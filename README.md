@@ -128,25 +128,25 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 #  Estrutura do Projeto
 
-```bash
+```
 consume-brasil-api
 │
 ├── index.html
-│
-├── src
-│   ├
-│   │
-│   ├── styles
-│   │   ├── reset.css
+├── images/
+├── src/
+│   ├── styles/
 │   │   ├── global.css
+│   │   ├── reset.css
 │   │   └── styles.css
-│   │
-│   └── pages
-│       ├── cep
-│       ├── cnpj
-│       ├── holidays
-│       ├── taxas
-│       └── registroBr
+│   └── pages/
+│       ├── banks/
+│       ├── cep/
+│       ├── cnpj/
+│       ├── ddd/
+│       ├── exchange/
+│       ├── holidays/
+│       ├── registroBr/
+│       └── taxas/
 ```
 
 Cada página possui seus próprios arquivos **HTML, CSS e JavaScript**, responsáveis por consumir o endpoint correspondente da API.
