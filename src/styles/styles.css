@@ -1,4 +1,4 @@
-    body, header, main, nav, footer {
+body, header, main, nav, footer {
     display: flex;
     flex-direction: column;
     align-items: center;
