@@ -12,8 +12,8 @@ async function getHolidaysData() {
 			const response = await fetch(`${apiUrl}${yearValue}`);
 
 			if (!response.ok) {
-				throw new Error("Não foi possível buscar informações sobre o "
-					+ "ano buscado!");
+				throw new Error("Não foi possível buscar informações sobre "
+					+ "esse ano!");
 			}
 
 			const data = await response.json();
