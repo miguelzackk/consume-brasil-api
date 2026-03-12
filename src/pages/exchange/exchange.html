@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Câmbio</title>
+	<link rel="stylesheet" href="../../styles/global.css">
+	<link rel="stylesheet" href="./exchange.css">
+</head>
+<body>
+	<header>
+		<a
+			id="return-link"
+			href="../../../index.html">
+			Retornar para a página inicial
+		</a>
+		<h1>Câmbio</h1>
+		<section id="description">
+			<p>
+				Retorna a lista completa de moedas que podem ser
+				utilizadas como parâmetros nos endpoints de consulta de câmbio,
+				incluindo informações sobre símbolo, nome e tipo de cada moeda.
+			</p>
+			<p>
+				Consulta o câmbio da moeda desejada em relação ao Real, em uma
+				data específica.
+			</p>
+		</section>
+	</header>
+	<main>
+		<label for="currency">Digite a moeda que deseja consultar: </label>
+		<input
+			id="currency"
+			name="currency"
+			type="text"
+			maxlength="3"
+			placeholder="EUR"
+			required>
+		<label for="date">Digite a data que deseja consultar: </label>
+		<input
+			id="date"
+			name="date"
+			type="date"
+			required>
+		<button id="search-button">Buscar</button>
+		<button id="list-button">Exibir / Ocultar todos as moedas</button>
+		<table id="currency-table">
+			<caption>
+				Moeda
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Moeda</th>
+					<th scope="col">Data</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+
+		<table id="exchange-table">
+			<caption>
+				Cotações
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Paridade Compra</th>
+					<th scope="col">Paridade Venda</th>
+					<th scope="col">Cotação Compra</th>
+					<th scope="col">Cotação Venda</th>
+					<th scope="col">Data e Hora da Cotação</th>
+					<th scope="col">Tipo de Boletim</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+
+		<table id="currency-list-table" class="hidden">
+			<caption>
+				Moedas Disponíveis
+			</caption>
+			<thead>
+				<tr>
+					<th scope="col">Símbolo</th>
+					<th scope="col">Nome</th>
+					<th scope="col">Tipo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--Data from API will be shown here-->
+			</tbody>
+		</table>
+	</main>
+	<footer>
+		<a
+			id="github-link"
+			href="https://github.com/miguelzackk/consume-brasil-api"
+			target="_blank">
+			Repositório no GitHub
+		</a>
+	</footer>
+	<script src="./exchange.js"></script>
+</body>
+</html>
