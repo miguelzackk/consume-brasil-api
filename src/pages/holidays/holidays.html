@@ -27,9 +27,16 @@
 	</header>
 	<main>
 		<label for="year">Digite o ano que deseja consultar: </label>
-		<input id="year" type="number" min="1900" max="2199" required>
-		<button type="submit">Buscar</button>
-		<table>
+		<input
+			id="year"
+			name="year"
+			type="text"
+			inputmode="numeric"
+			maxlength="4"
+			placeholder="2000"
+			required>
+		<button id="search-button">Buscar</button>
+		<table id="holidays-table">
 			<caption>
 				Feriados
 			</caption>
